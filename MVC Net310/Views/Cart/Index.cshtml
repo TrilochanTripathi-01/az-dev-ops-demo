@@ -1,0 +1,37 @@
+﻿@model MVC_Net310.Models.ProductsViewModel
+
+@{
+    ViewData["Title"] = "Review Cart";
+}
+
+<h1>My Cart</h1>
+
+<div>
+    <h4>Your Cart Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+            @Html.HiddenFor(model=>model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SellPrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SellPrice)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Payment">Proceed to checkout</a> |
+    <a asp-action="Index" asp-controller="ProductList">Cancel</a>
+</div>
