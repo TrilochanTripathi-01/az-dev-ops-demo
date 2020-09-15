@@ -1,0 +1,18 @@
+﻿@model ProductsViewModel
+<form asp-controller="Cart">
+    <div class="card">
+        <img src="img/cal.jpg" />
+        <div class="card-title">
+            <h6>
+                @Html.HiddenFor(x => x.Id) @Model.Name INR @Model.SellPrice <br /><div>Rating</div><div>Review</div>
+                @Html.HiddenFor(x => x.Name)
+                @Html.HiddenFor(x => x.Description)
+                @Html.HiddenFor(x => x.SellPrice)
+            </h6>
+        </div>
+        <button class="btn btn-warning">View Details</button>
+        <button class="btn btn-warning">Buy</button>
+    </div>
+@*</d   iv>*@
+<div style="height:25px"></div>
+</form>

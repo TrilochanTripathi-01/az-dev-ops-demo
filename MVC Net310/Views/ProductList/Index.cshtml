@@ -1,0 +1,18 @@
+﻿@model IList<MVC_Net310.Models.ProductsViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{ await Html.RenderPartialAsync("_Search"); }
+    
+    
+    <div class="row col-md-12">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3">
+                    @{ await Html.RenderPartialAsync("_ProductCard", item); }
+                </div>
+            }
+        </div>
+       
